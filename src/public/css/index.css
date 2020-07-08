@@ -37,6 +37,7 @@ header:before {
 	width: 100%;
 	background: #2A2A2A;
 }
+
 .welcome-text{
 	width: 80%;
 	padding: 50px;
@@ -102,10 +103,20 @@ header:before {
 /*Estilos en donde aparecen los ultimos posts*/
 section{
 	margin-top: 50px;
+	margin-bottom: 50px;
 	min-height: 400px;
-	background: #F4F4F4; 
+	box-shadow: 0 20px 10px 10px #F4F4F4;
+
 }
 section h2{
 	color: #2A2A2A;
 	font-family:'Roboto';
+}
+.card{
+	width: 300px;
+}
+div.row{
+	display: flex;
+	margin: 0 10px;
+	padding-bottom: 30px;
 }

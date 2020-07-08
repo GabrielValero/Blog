@@ -32,8 +32,23 @@
 		</div>
 	</div>
 	<section class="container">
-		<h2 class="d-inline-block my-5 mx-5">Ultimos Posts: </h2>
-		
+			<h2 class="d-inline-block mt-5 ml-5">Ultimos Posts</h2>
+
+			<div class="row"> 
+			<% for(let i = data.length-1; i>=0; i--){%>
+			<div class="m-3">
+				<div class="card relative">
+					<img src="<%= data[i].image %>?24" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title"><%= data[i].title %></h4>
+						<h5 class="card-subtitle text-muted"><%= data[i].tags %></h5>
+						<p class="card-text my-3"><%= data[i].description %></p>
+					</div>
+					<a href="<%= data[i].page %>" class="btn btn-outline-success m-3">Post</a>
+				</div>
+			</div>
+		<%} %>
+		</div>
 	</section>
 	
 </body>

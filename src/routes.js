@@ -16,8 +16,15 @@ const new_post = new Schema({
 const post = model('Post',new_post);
 
 // PAGINA
-router.get('/', (req,res)=>{
-	res.render('index.ejs');
+router.get('/', async (req,res)=>{
+	const response = await post.find();
+	console.log(response);
+	for(let i=0; i<response.length; i++){
+		response[i].tags = response[i].tags.toString().replace(/,/g, ' ');
+	}
+	res.render('index.ejs',{
+		data: response
+	})
 })
 router.route('/post')
 	.get(async (req,res)=>{
