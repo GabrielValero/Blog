@@ -3,7 +3,8 @@
 <head>
 	<title>Nothing</title>
 	<%- include('partials/head.ejs') %>
-	<link rel="stylesheet" type="text/css" href="http://localhost:5000/css/add.css?6">
+	<link rel="stylesheet" type="text/css" href="https://gabo-blog.herokuapp.com/css/add.css?6">
+	<link rel="stylesheet" type="text/css" href="https://gabo-blog.herokuapp.com/css/nav.css?6">
 </head>
 <body>
 	<div class="container">
@@ -20,6 +21,10 @@
 				<div class="form-group">
 					<div>Tags:</div>
 					<input type="text" name="tags" class="form-control" value="<%= data.tags %>">
+				</div>
+				<div class="form-group">
+					<div>Pagina:</div>
+					<input type="text" name="page" class="form-control" value="<%= data.page %>">
 				</div>
 			</div>
 			<div class="col-6 form-group">

@@ -60,7 +60,6 @@ router.get('/add', async(req,res)=>{
 router.route('/posts/:id')
 	.get(async (req,res)=>{
 		const response = await post.findById({_id: req.params.id});
-
 		res.json(response);
 	})
 
