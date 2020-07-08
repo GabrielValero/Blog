@@ -1,0 +1,96 @@
+body{
+	max-width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+nav{
+	max-height: 70px;
+	background: white;
+	width: 100%;
+}
+.navbar{
+	position: fixed;
+	z-index: 3;
+}
+/*boton del menu*/
+.menu{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+}
+.menu_bar{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.menu_bar span {
+    width: 100%;
+    background: #2A2A2A;
+    padding: 3px;
+    border-radius: 30px;
+}
+/*navegacion (Parte izquierda)*/
+
+.nav-link{
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 17px;
+	
+}
+nav div.nav-item{
+	width: 100%;
+	height: 165px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #2A2A2A;
+	transform: rotate(30deg);
+	transition-duration: 0.5s;
+}
+nav div.nav-item:hover{
+	background: white;
+	position: relative;
+	z-index: 2;
+	transition-duration: 0.5s;
+}
+nav div.nav-item:hover a{
+	color: #2A2A2A;
+	transition-duration: 0.5s;
+}
+nav div.nav-item a{
+	color: white;
+	transform: rotate(-30deg);
+	transition-duration: 0.5s;
+}
+.relative{
+	position: relative;
+	z-index: 2;
+}
+
+
+
+/*Medias*/
+@media(min-width: 576px){
+	nav{
+		overflow: hidden;
+	}
+}
+@media(max-width: 575px){
+	nav div.nav-item{
+		padding: 0;
+		height: 100%;
+		transform: rotate(0);
+	}
+	nav div.nav-item a{
+		transform: rotate(0);
+	}
+}

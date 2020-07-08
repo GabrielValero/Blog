@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nothing</title>
+	<%- include('partials/head.ejs') %>
+	<link rel="stylesheet" type="text/css" href="css/add.css?24">
+</head>
+<body>
+	<%- include('partials/nav') %>
+	<div class="container">
+		<form method="POST" action="/api/post" class="row">
+			<div class="col-6 d-inline-block">
+				<div class="form-group">
+					<div>Titulo:</div>
+					<input type="text" name="title" class="form-control">
+				</div>
+				<div class="form-group">
+					<div>Image:</div>
+					<input type="text" name="image" class="form-control">
+				</div>
+				<div class="form-group">
+					<div>Tags:</div>
+					<input type="text" name="tags" class="form-control">
+				</div>
+				<div class="form-group">
+					<div>Pagina:</div>
+					<input type="text" name="page" class="form-control">
+				</div>
+			</div>
+			<div class="col-6 form-group">
+				<div>Descripcion:</div>
+				<textarea class="form-control h-75" name="description"></textarea>
+				<input type="submit" class="my-3 mx-2 btn btn-primary" value="Submit" onclick="return auth()">
+				<input type="button" class="my-3 mx-2 btn btn-danger" value="Cancel" onclick="cancel()">
+			</div>
+
+		</form>
+	</div>
+
+	<section>
+		<div class="row"> 
+			<% for(let i = data.length-1; i>=0; i--){%>
+			<div class="my-4">
+				<div class="card relative">
+					<a href="/edit/<%= data[i]._id %>"  class="edit">
+						<img src="Icons/bootstrap-icons-1.0.0-alpha4/pencil-square.svg" width="100%">
+					</a>
+					<a href="/add" class="btn btn-danger absolute" onclick="Delete(`<%= data[i]._id %>`)">
+						<img src="Icons/bootstrap-icons-1.0.0-alpha4/trash.svg">
+					</a>
+					<img src="<%= data[i].image %>?24" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title"><%= data[i].title %></h4>
+						<h5 class="card-subtitle text-muted"><%= data[i].tags %></h5>
+						<p class="card-text my-3"><%= data[i].description %></p>
+					</div>
+					<a href="<%= data[i].page %>" class="btn btn-outline-success m-3">Post</a>
+				</div>
+			</div>
+		<%} %>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/add.js?24"></script>
+</body>
+</html>
