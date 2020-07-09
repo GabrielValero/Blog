@@ -37,7 +37,12 @@
 			<div class="row"> 
 			<% for(let i = data.length-1; i>=0; i--){%>
 			<div class="m-3">
-				<div class="card relative">
+				<% if(i%2!=0){ %>
+					<div class="card relative dark">
+				<% } %> 
+				<% if(i%2==0){ %>
+					<div class="card relative">
+				<% } %>
 					<img src="<%= data[i].image %>?24" class="card-img-top">
 					<div class="card-body">
 						<h4 class="card-title"><%= data[i].title %></h4>
@@ -50,7 +55,9 @@
 		<%} %>
 		</div>
 	</section>
-	
+	<footer>
+		
+	</footer>
 </body>
 </html>
 

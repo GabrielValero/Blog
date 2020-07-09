@@ -21,6 +21,7 @@ router.get('/', async (req,res)=>{
 	console.log(response);
 	for(let i=0; i<response.length; i++){
 		response[i].tags = response[i].tags.toString().replace(/,/g, ' ');
+		response[i].image = response[i].image.replace('Verde', 'Negro')
 	}
 	res.render('index.ejs',{
 		data: response

@@ -115,8 +115,22 @@ section h2{
 .card{
 	width: 300px;
 }
+.dark.card{
+	background: #2A2A2A;
+}
+.dark .card-title{
+	color: white;
+}
+.dark .card-subtitle, .card-text{
+	color: #D0CFCF;
+}
+.card-text{
+	color: #2A2A2A;
+	font-size: 20px;
+}
 div.row{
 	display: flex;
+	justify-content: center;
 	margin: 0 10px;
 	padding-bottom: 30px;
 }
