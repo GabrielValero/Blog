@@ -27,6 +27,10 @@ router.get('/', async (req,res)=>{
 		data: response
 	})
 })
+router.get('/recursos-DEV/ilustraciones', (req,res)=>{
+	res.render('ilustraciones-1.ejs');
+})
+
 router.route('/post')
 	.get(async (req,res)=>{
 		const response = await post.find();

@@ -121,7 +121,7 @@ section h2{
 .dark .card-title{
 	color: white;
 }
-.dark .card-subtitle, .card-text{
+.dark .card-subtitle, .dark .card-text{
 	color: #D0CFCF;
 }
 .card-text{
