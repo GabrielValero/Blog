@@ -8,7 +8,7 @@ function auth(){
 	}
 }
 function Delete(id){
-	fetch(`http://localhost:5000/api/post/${id}`,{
+	fetch(`https://gabo-blog.herokuapp.com/api/post/${id}`,{
 		method: 'DELETE'
 	})
 }
