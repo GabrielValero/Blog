@@ -81,7 +81,7 @@ nav div.nav-item a{
 
 
 /*Medias*/
-@media(min-width: 576px){
+@media all and (min-width: 576px){
 	nav{
 		overflow: hidden;
 	}
@@ -89,7 +89,7 @@ nav div.nav-item a{
 		font-size: 17px;
 	}
 }
-@media(max-width: 575px){
+@media all and (max-width: 575px){
 	nav div.nav-item{
 		padding: 0;
 		height: 100%;

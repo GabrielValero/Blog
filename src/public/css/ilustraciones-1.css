@@ -13,10 +13,6 @@ h2.display-1{
 	transform: translateY(-5px);
 	color: #2E2D46;
 }
-header h2:first-of-type{
-	transform: translateY(0);
-	color: #46446A;
-}
 header img{
 	position: absolute;
 	bottom: 0;
@@ -135,28 +131,17 @@ span{
 	padding: 15px;
 	border-radius: 30px;
 }
-.cons img{
-	position: absolute;
+.image-ilustration{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .cons{
-	height: 80vh;
+	overflow: hidden;
+	height: 60vh;
 }
-.cons img:nth-child(1){
-	bottom: 20%;
-	left: 20%;
-}
-.cons img:nth-child(2){
-	bottom: 70%;
-	left: 20%;
-	transform: rotate(-35deg);
-}
-.cons img:nth-child(3){
-	left: 60%;
-	bottom: 25%;
-}
-.cons img:nth-child(4){}
-
-@media(max-width: 900px) {
+@media all and (max-width: 900px) {
 	.introduction p{
 		margin: 1em;
 	}
@@ -164,7 +149,7 @@ span{
 		margin: 1em;
 	}
 }
-@media(max-width: 600px){
+@media all and (max-width: 600px){
 	.img-ilustration{
 		width: 70%;
 	}
