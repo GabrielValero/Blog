@@ -15,34 +15,7 @@ const new_post = new Schema({
 
 const post = model('Post',new_post);
 
-// PAGINA
-router.get('/', async (req,res)=>{
-	const response = await post.find();
-	console.log(response);
-	for(let i=0; i<response.length; i++){
-		response[i].tags = response[i].tags.toString().replace(/,/g, ' ');
-		response[i].image = response[i].image.replace('Verde', 'Negro')
-	}
-	res.render('index.ejs',{
-		data: response
-	})
-})
-router.get('/recursos-DEV/ilustraciones', (req,res)=>{
-	res.render('ilustraciones-1.ejs');
-})
-
-router.route('/post')
-	.get(async (req,res)=>{
-		const response = await post.find();
-		console.log(response.length)
-		for(let i=0; i<response.length; i++){
-			console.log(response[i]);
-		}
-		res.json(response);
-	})
-
-
-//admin
+//CMS
 router.get('/edit/:id', async(req,res)=>{
 	const response = await post.findById({_id: req.params.id});
 	console.log(response);
@@ -103,5 +76,25 @@ router.route('/api/post/:id')
 		console.log(response);
 		res.redirect('/add');
 	})
+
+// PAGINA
+router.get('/', async (req,res)=>{
+	const response = await post.find();
+	console.log(response);
+	for(let i=0; i<response.length; i++){
+		response[i].tags = response[i].tags.toString().replace(/,/g, ' ');
+		response[i].image = response[i].image.replace('Verde', 'Negro')
+	}
+	res.render('index.ejs',{
+		data: response
+	})
+})
+router.get('/recursos-DEV/ilustraciones', (req,res)=>{
+	res.render('Posts/ilustraciones-1.ejs');
+})
+
+router.get('/lenguajes/Node', (req,res)=>{
+	res.render('Posts/Node.ejs');
+})
 
 module.exports = router;
