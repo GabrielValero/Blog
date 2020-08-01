@@ -143,10 +143,10 @@ section a:hover{
 }
 
 /*MEDIA QUERYYYS*/
-/*
+
 @media (max-width: 930px) {
 	.header h2{
-		font-size: 4vw;
+		font-size: 1.5rem;
 	}
 	.advantage{
 		width: 100%;
@@ -176,4 +176,24 @@ section a:hover{
 	}
 	
 }
-*/
+@media (max-width: 650px){
+	.header{
+		height: 65vh;
+	}
+	.header::before{
+		bottom:-15%;
+	}
+	.header .node-img>div{
+		width: 50%;
+	}
+}
+@media (max-width: 500px){
+	.header .node-img>div{
+		width: 70%;
+	}
+}
+@media (max-width: 420px){
+	.aprendelo-ya{
+		font-size: 40px;
+	}
+}

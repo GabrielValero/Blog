@@ -20,6 +20,9 @@ nav{
 	top: 0;
 	z-index: 3;
 }
+.navbar-nav{
+	background: #2A2A2A;
+}
 /*boton del menu*/
 .menu{
     width: 40px;
