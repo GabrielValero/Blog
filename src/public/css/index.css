@@ -9,6 +9,7 @@ header{
 	align-items: center;
 	position: relative;
 }
+
 header:before {
 	content:'';
 	position: absolute;
@@ -28,6 +29,44 @@ header:before {
 	letter-spacing: 5px;
 	font-family: 'Modak', cursive;
 }
+/*Iconos y animacion para ellos*/
+.Iconos{
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.Iconos svg{
+	position: absolute;
+}
+.Iconos svg:nth-child(1){
+	top: -10px;
+	animation: 1s animate ease infinite;
+}
+.Iconos svg:nth-child(2){
+	top: 25px;
+	opacity: 0.7;
+}
+.Iconos svg:nth-child(3){
+	top: 37px;
+	opacity: 0.5;
+}
+@keyframes animate{
+	from{
+		top:-10px;
+	}
+	50%{
+		top: 3px;
+	}
+	to{
+		top: -10px;
+	}
+}
+
 
 /*Texto de bienvenidaaa*/
 .welcome{
@@ -64,40 +103,7 @@ header:before {
 .especial{
 	font-size: 35px;
 }
-/*Iconos y animacion para ellos*/
-.Iconos{
-	width: 100%;
-	height: 80px;
-	text-align: center;
-	position: relative;
-}
-.Iconos svg{
-	position: absolute;
-}
-.Iconos svg:nth-child(1){
-	top: -10px;
-	animation: 1s animate ease infinite;
-}
-.Iconos svg:nth-child(2){
-	top: 25px;
-	opacity: 0.7;
-}
-.Iconos svg:nth-child(3){
-	top: 37px;
-	opacity: 0.5;
-	transform: translateX(5px);
-}
-@keyframes animate{
-	from{
-		top:-10px;
-	}
-	50%{
-		top: 3px;
-	}
-	to{
-		top: -10px;
-	}
-}
+
 
 
 /*Estilos en donde aparecen los ultimos posts*/
@@ -133,4 +139,15 @@ div.row{
 	justify-content: center;
 	margin: 0 10px;
 	padding-bottom: 30px;
+}
+@media (max-width: 650px){
+	.welcome-text{
+		width: 100%;
+		padding: 50px 15px;
+	}
+}
+@media (max-width: 420px){
+	.welcome-text h2 span{
+		font-size: 40px;
+	}
 }

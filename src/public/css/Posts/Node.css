@@ -97,8 +97,15 @@ header{
 	font-weight: 600;
 }
 /*----------------------------------*/
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
 section>div{
-	margin:100px;
+	width: 70%;
+	margin: 30px;
 }
 section h2{
 	font-size: 35px;
@@ -134,3 +141,39 @@ section a:hover{
 	box-shadow: 0 0 20px #B4B4B4;
 	text-align: center;
 }
+
+/*MEDIA QUERYYYS*/
+/*
+@media (max-width: 930px) {
+	.header h2{
+		font-size: 4vw;
+	}
+	.advantage{
+		width: 100%;
+	}
+	.end>div p{
+		width: 100%;
+	}
+}
+@media (max-width: 767px) {
+	.server-down{
+		display: none;
+	}
+	.guide p{
+		width: 90%;
+	}
+	.proyect p{
+		text-align: justify;
+	}
+	.bird{
+		width: 80%;
+	}
+	section p{
+		width: 100%;
+	}
+	.ballon{
+		width: 80%;
+	}
+	
+}
+*/

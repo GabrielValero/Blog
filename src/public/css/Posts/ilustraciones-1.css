@@ -1,6 +1,8 @@
+
 .relative{
 	position: relative;
 }
+
 header{
 	height: 30vw;
 	display: flex;
@@ -158,6 +160,10 @@ span{
 	}
 	.introduction2 p{
 		font-size: 17px;
+	}
+	h2.display-1{
+		font-size: 3rem;
+		transform: translateY(-5px);
 	}
 }
 
