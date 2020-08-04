@@ -90,6 +90,9 @@ nav div.nav-item a{
 
 /*Medias*/
 @media (min-width: 576px) {
+	.navbar-nav{
+		background: none;
+	}
 	nav{
 		overflow: hidden;
 	}
