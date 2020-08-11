@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>Ejemplo</title>
+	
+	<title>Gabo NG | El blog para devs</title>
 	<%- include('./partials/head.ejs') %>
-	<link rel="stylesheet" type="text/css" href="css/nav.css?24">
 	<link rel="stylesheet" type="text/css" href="css/index.css?24">
 </head>
 <body>
 	<%- include('partials/nav.ejs') %>
 	<header>
 		<div class="text-header text-center">
-			<h2>Aprende Como Yo Lo Hago<img src="Icons/pizza.svg" width="50px;"></h2>
+			<h2>Aprende Como Yo Lo Hago<img src="Icons/pizza.svg" alt="Icono de pizza" width="50px;"></h2>
 			<br><br>
 			<div class="Iconos">
 				<svg width="40px" viewBox="0 0 16 16" class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -43,11 +43,12 @@
 				<% if(i%2==0){ %>
 					<div class="card relative">
 				<% } %>
-					<img src="<%= data[i].image %>?24" class="card-img-top">
+					<img src="<%= data[i].image %>?24" alt="img de <%= data[i].title %>" class="card-img-top">
 					<div class="card-body">
 						<h4 class="card-title"><%= data[i].title %></h4>
-						<h5 class="card-subtitle text-muted"><%= data[i].tags %></h5>
 						<p class="card-text my-3"><%= data[i].description %></p>
+						<br>
+						<p class="card-subtitle"><%= data[i].tags %></p>
 					</div>
 					<a href="<%= data[i].page %>" class="btn btn-outline-success m-3">Post</a>
 				</div>
